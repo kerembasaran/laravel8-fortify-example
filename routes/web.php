@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::view('/home','home')->middleware('auth');
+Route::view('/profile/edit','profile.edit')->middleware('auth')->name('profile.edit');
