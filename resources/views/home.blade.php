@@ -39,6 +39,9 @@
                             @csrf
                             @if(auth()->user()->two_factor_secret)
                                 @method('DELETE')
+                                <div class="mb-3">
+                                    {!! auth()->user()->twoFactorQrCodeSvg() !!}
+                                </div>
                                 <button class="btn btn-danger">Disable</button>
                             @else
                                 <button class="btn btn-primary">Enable</button>
